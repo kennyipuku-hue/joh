@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #181818;
+}
+::-webkit-scrollbar-thumb {
+  background: #3E3E3E;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1DB954;
+}
+
+/* Utility for hiding scrollbar on horizontal carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Text gradient utilities */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #F0B628 0%, #C2820F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-spotify {
+  background: linear-gradient(135deg, #1ED760 0%, #1DB954 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Equalizer bars animation */
+@keyframes eq {
+  0%, 100% { height: 20%; }
+  50% { height: 100%; }
+}
+.eq-bar {
+  animation: eq 0.8s ease-in-out infinite;
+}
